@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manage student</title>
+    <link rel="stylesheet" href="managestudent.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+                        <span class="title" style="font-size: larger;">Online Examination System</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <div class="heading">
+                      <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Courses</span> 
+                    </div>
+                    <a href="#" id="add-course-link">
+                        <span class="icon"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Add Courses</span>
+                    </a>
+                </li>
+                
+               
+                <li>
+                    <a href="managecourse.html">
+                        <span class="icon"><ion-icon name="shield-half-outline"></ion-icon></span>
+                        <span class="title">Manage Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Exam</span> 
+                      </div>
+                    <a href="#" id="add-exam-link">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Add Exam</span>
+                    </a>
+                </li>      
+                <li>
+                    <a href="manageexam.html">
+                        <span class="icon"><ion-icon name="clipboard-outline"></ion-icon></span>
+                        <span class="title">Manage Exam</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Students</span> 
+                      </div>
+                    <a href="managestudent.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Manage Students</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Reports</span> 
+                      </div>
+                    <a href="studentresult.html">
+                        <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+                        <span class="title">Students Result</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="admin.html" class="home-link">
+                        <div class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </div>
+                        <div class="title">
+                            Back to Home
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <div class="footer-content">
+              <p>&copy; 2024 Online Examination System. All rights reserved.</p>
+            </div>
+          </footer>
+        <div class="main">
+            <div class="topbar">
+
+                <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+                <div class="search">
+                    <label for="">
+                        <input type="search" name="" id="">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                
+                <div class="user">
+                    <img src="images/user.jpg" alt="">
+                    <!-- <div class="dropdown-content" id="logoutDropdown">
+                        <a href="#">Logout</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="dashBox">
+                <div class="card">
+                    <div class="iconBx">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <div class="cardName">Manage Student</div>
+                    </div>
+                </div></div>
+            <div class="details">
+                <div class="recentOrder">
+                    <div class="cardHeader">
+                        <h2>Student List</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>    
+                                <td>Full Name</td>
+                                <td>Birthdate</td>
+                                <td>Course</td>
+                                <td>Year Level</td>
+                                <td>Email</td>
+                                <td>Password</td>
+                                <td >Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ramapraba J</td>
+                                <td>10-06-2003</td>
+                                <td>OOPS</td>
+                                <td>IV</td>
+                                <td>rama@gmail.com</td>
+                                <td>rama@123</td>
+                                <td> <a href="#" id="add-student-link"class="btn" style="background-color: blue;" >Update</a></td>
+                            </tr>
+                            <tr>
+                                <td>Priyadharshini S</td>
+                                <td>27-12-2002</td>
+                                <td>Web Development</td>
+                                <td>IV</td>
+                                <td>priya@gmail.com</td>
+                                <td>priya@123</td>
+                                <td> <a href="#" id="add-student-link"class="btn" style="background-color: blue;" >Update</a></td>
+                            </tr>
+                            <tr>
+                                <td>Preetha I</td>
+                                <td>30-05-2002</td>
+                                <td>Cyber Security</td>
+                                <td>III</td>
+                                <td>preetha@gmail.com</td>
+                                <td>preetha@123</td>
+                                <td> <a href="#"id="add-student-link" class="btn" style="background-color: blue;" >Update</a></td>
+                            </tr>
+                            <tr>
+                                <td>Nithialakshmi N</td>
+                                <td>07-06-2003</td>
+                                <td>Data Science</td>
+                                <td>II</td>
+                                <td>nithia@gmail.com</td>
+                                <td>nithia@123</td>
+                                <td> <a href="#" id="add-student-link"class="btn" style="background-color: blue;" >Update</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+               
+    </div>
+    <div id="add-student-popup" class="popup">
+        <div class="popup-content">
+            <ion-icon name="close-circle" id="close-student-popup" style="float:right;font-size: 2.0em;color: #287bff;"></ion-icon>
+            <form id="add-student-form" action="/">
+                <h1>Update Student</h1>&nbsp;
+                <hr><br>
+                <div class="input-control">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter full name" value="Ramapraba J" style="font-family: 'Times New Roman', Times, serif;">
+                    <span class="error" id="fullNameError"></span>
+                </div><br>
+                <div class="input-control">
+                    <label for="birthdate">Birthdate</label>
+                    <input type="date" id="birthdate" name="birthdate" value="2003-06-10" style="font-family: 'Times New Roman', Times, serif;">
+                    <span class="error" id="birthdateError"></span>
+                </div><br>
+                <div class="input-control">
+                    <label for="course">Course</label>
+                    <select id="course" name="course" style="font-family: 'Times New Roman', Times, serif;">
+                        <option value="OOPS" selected>OOPS</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                    </select>
+                    <span class="error" id="courseError"></span>
+                </div><br>
+                <div class="input-control">
+                    <label for="yearLevel">Year Level</label>
+                    <select id="yearLevel" name="yearLevel" style="font-family: 'Times New Roman', Times, serif;">
+                        <option value="I" selected>I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                    </select>
+                    <span class="error" id="yearLevelError"></span>
+                </div><br>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" value="rama@email.com" style="font-family: 'Times New Roman', Times, serif;">
+                    <span class="error" id="emailError"></span>
+                </div><br>
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" value="rama@123" style="font-family: 'Times New Roman', Times, serif;">
+                    <span class="error" id="passwordError"></span>
+                </div><br>
+                <div class="button-container">
+                    <button type="button" id="add-student-button" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popups" id="update-student-success" style="display: none;">
+        <div class="popup-contents">
+            <ion-icon style="font-size: 9.0em; color: rgb(8, 151, 8);" name="checkmark-circle-outline"></ion-icon>
+            <h1>Updated Successfully</h1><br>
+            <pre>Students details have been updated</pre><br>
+            <button id="okButton" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Ok</button>
+        </div>
+    </div>
+</div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // menu toggle
+        const toggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        const main = document.querySelector(".main");
+
+        toggle.onclick = function(){
+            navigation.classList.toggle("active")
+            main.classList.toggle("active")
+        }
+
+
+        // add hovered class in selected list item
+        const list = document.querySelectorAll(".navigation li");
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove("hovered"));
+            this.classList.add("hovered");
+        }
+        list.forEach((item) =>
+        item.addEventListener("mouseover",activeLink));
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const addStudentLink = document.getElementById('add-student-link');
+    const addStudentPopup = document.getElementById('add-student-popup');
+    const closeStudentPopupBtn = document.getElementById('close-student-popup');
+
+    // Show the add exam popup when the link is clicked
+    addStudentLink.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        addStudentPopup.style.display = "block"; // Show the popup
+    });
+
+    // Close the add exam popup when the close button is clicked
+    closeStudentPopupBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default button behavior
+        addStudentPopup.style.display = "none"; // Hide the popup
+    });
+
+    // Close the add exam popup when clicking outside the popup
+    window.addEventListener('click', function(event) {
+        if (event.target == addStudentPopup) {
+            addStudentPopup.style.display = "none"; // Hide the popup
+        }
+    });
+  
+    document.getElementById('add-student-button').addEventListener('click', function () {
+        // Resetting previous error messages
+        document.querySelectorAll('.error').forEach(error => error.textContent = '');
+
+        // Retrieving form data
+        var fullName = document.getElementById('fullName').value;
+        var birthdate = document.getElementById('birthdate').value;
+        var course = document.getElementById('course').value;
+        var yearLevel = document.getElementById('yearLevel').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        // Flag for form validity
+        var isValid = true;
+
+        // Validation for full name
+        if (fullName.trim() === "") {
+            document.getElementById('fullNameError').innerText = "Please enter full name.";
+            isValid = false;
+        }
+
+        // Validation for birthdate
+        if (birthdate === "") {
+            document.getElementById('birthdateError').innerText = "Please select birthdate.";
+            isValid = false;
+        }
+
+        // Validation for course
+        if (course === "") {
+            document.getElementById('courseError').innerText = "Please select a course.";
+            isValid = false;
+        }
+
+        // Validation for year level
+        if (yearLevel === "") {
+            document.getElementById('yearLevelError').innerText = "Please select year level.";
+            isValid = false;
+        }
+
+        // Validation for email
+        if (email.trim() === "") {
+            document.getElementById('emailError').innerText = "Please enter email.";
+            isValid = false;
+        } else if (!isValidEmail(email.trim())) {
+            document.getElementById('emailError').innerText = "Please enter a valid email.";
+            isValid = false;
+        }
+
+        // Validation for password
+        if (password.trim() === "") {
+            document.getElementById('passwordError').innerText = "Please enter password.";
+            isValid = false;
+        }
+
+        // If form is valid, display success popup
+        if (isValid) {
+            document.getElementById('update-student-success').style.display = 'block';
+        }
+    });
+
+    // Event listener for closing the success popup
+    document.getElementById('okButton').addEventListener('click', function () {
+        document.getElementById('update-student-success').style.display = 'none';
+    });
+
+// Function to validate email format
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manage exam</title>
+    <link rel="stylesheet" href="manageexam.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+                        <span class="title" style="font-size: larger;">Online Examination System</span>
+                       
+                    </a>
+                </li>
+                
+                <li>
+                    <div class="heading">
+                      <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Courses</span> 
+                    </div>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Add Courses</span>
+                    </a>
+                </li>
+                
+               
+                <li>
+                    <a href="managecourse.html">
+                        <span class="icon"><ion-icon name="shield-half-outline"></ion-icon></span>
+                        <span class="title">Manage Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Exam</span> 
+                      </div>
+                    <a href="#"  id="add-exam-link">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Add Exam</span>
+                    </a>
+                </li>      
+                <li>
+                    <a href="manageexam.html">
+                        <span class="icon"><ion-icon name="clipboard-outline"></ion-icon></span>
+                        <span class="title">Manage Exam</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Students</span> 
+                      </div>
+                    <a href="managestudent.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Manage Students</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Reports</span> 
+                      </div>
+                    <a href="studentresult.html">
+                        <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+                        <span class="title">Students Result</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="admin.html" class="home-link">
+                        <div class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </div>
+                        <div class="title">
+                            Back to Home
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+
+                <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+
+                <div class="search">
+                    <label for="">
+                        <input type="search" name="" id="">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                
+                <div class="user">
+                    <img src="images/user.jpg" alt="">
+                    <!-- <div class="dropdown-content" id="logoutDropdown">
+                        <a href="#">Logout</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="dashBox">
+                <div class="card">
+                    <div class="iconBx">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <div class="cardName">Manage Exam</div>
+                    </div>
+                </div></div>
+            <div class="details">
+                <div class="recentOrder">
+                    <div class="cardHeader">
+                        <h2>Exam List</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>    
+                                <td>Exam Name</td>
+                                <td>Course</td>
+                                <td>Description</td>
+                                <td>Timelimit</td>
+                                <td>Display Limit</td>
+                                <td >Action</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Inheritance Concept</td>
+                                <td>OOPS</td>
+                                <td>Take Exam</td>
+                                <td>1 hour</td>
+                                <td>1 minute</td>
+                                <td> <a href="managequestions.html" class="button" style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Hacking</td>
+                                <td>Cyber security</td>
+                                <td>Take Exam</td>
+                                <td>2 hour</td>
+                                <td>5 minute</td>
+                                <td> <a href="managequestions.html" class="button" style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Hacking</td>
+                                <td>Cyber security</td>
+                                <td>Take Exam</td>
+                                <td>2 hour</td>
+                                <td>5 minute</td>
+                                <td> <a href="managequestions.html" class="button" style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Hacking</td>
+                                <td>Cyber security</td>
+                                <td>Take Exam</td>
+                                <td>2 hour</td>
+                                <td>5 minute</td>
+                                <td> <a href="managequestions.html" class="button" style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <footer>
+                    <div class="footer-content">
+                      <p>&copy; 2024 Online Examination System. All rights reserved.</p>
+                    </div>
+                  </footer>
+                  <div id="add-exam-popup" class="popup">
+                    <div class="popup-content">
+                        <ion-icon name="close-circle" id="close-exam-popup" style="float:right;font-size: 2.0em;color:  #287bff;"></ion-icon>
+                
+                        <form id="add-exam-form">
+                
+                            <h1>Add Exam</h1>
+                            <hr><br>
+                            <div class="input-control">
+                                <label for="course">Select Course:</label>
+                                <select id="course" name="course">
+                                    <option value="">-- Select Course --</option>
+                                    <option value="webDevelopment">Web Development</option>
+                                    <option value="dataScience">Data Science</option>
+                                    <option value="artificialIntelligence">Artificial Intelligence</option>
+                                </select>
+                                <span class="error" id="courseError"></span>
+                            </div><br>
+                            <div class="input-control">
+                                <label for="timeLimit">Exam Time Limit:</label>
+                                <select id="timeLimit" name="timeLimit">
+                                    <option value="">-- Select Time Limit --</option>
+                                    <option value="30">30 Minutes</option>
+                                    <option value="60">1 Hour</option>
+                                    <option value="120">2 Hours</option>
+                                </select>
+                                <span class="error" id="timeLimitError"></span>
+                            </div><br>
+                            <div class="input-control">
+                                <label for="questionLimit">Question Limit to Display:</label>
+                                <input type="number" id="questionLimit" name="questionLimit" min="1" max="1000">
+                                <span class="error" id="questionLimitError"></span>
+                            </div><br>
+                            <div class="input-control">
+                                <label for="examTitle">Exam Title:</label>
+                                <input type="text" id="examTitle" name="examTitle">
+                                <span class="error" id="examTitleError"></span>
+                            </div><br>
+                            <div class="input-control">
+                                <label for="examDescription">Exam Description:</label><br>
+                                <textarea id="examDescription" rows="8" cols="65"></textarea>
+                                <span class="error" id="examDescriptionError"></span>
+                            </div><br>
+                            <div class="button-container">
+                                <button type="button" id="add-now-btn" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Add Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="popups" id="popup" style="display: none;">
+                    <div class="popup-contents">
+                        <ion-icon style="font-size: 9.0em; color: rgb(8, 151, 8);" name="checkmark-circle-outline"></ion-icon>
+                        <h1>Success</h1>
+                        <pre>Course added successfully</pre><br>
+                        <button id="okButton" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Ok</button>
+                    </div>
+                </div>
+                <!-- <div id="exam-popup" class="popups">
+                    <div class="popup-content">
+                        <ion-icon style="font-size: 9.0em;
+                        color: orange;" name="alert-circle-outline"></ion-icon>
+                        <h1>Are you sure ?</h1>
+                        <pre >you want to take this exam now,
+     your time will start automatically </pre><br>
+                        <button id="start-exam-btn" class="btn">Yes Start Now</button>
+                        <button id="cancel-exam-btn" class="btn">Cancel</button>
+                    </div>
+                </div> -->
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // menu toggle
+        const toggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        const main = document.querySelector(".main");
+
+        toggle.onclick = function(){
+            navigation.classList.toggle("active")
+            main.classList.toggle("active")
+        }
+
+
+        // add hovered class in selected list item
+        const list = document.querySelectorAll(".navigation li");
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove("hovered"));
+            this.classList.add("hovered");
+        }
+        list.forEach((item) =>
+        item.addEventListener("mouseover",activeLink));
+        document.addEventListener("DOMContentLoaded", function() {
+    const addExamLink = document.getElementById('add-exam-link');
+    const addExamPopup = document.getElementById('add-exam-popup');
+    const closeExamPopupBtn = document.getElementById('close-exam-popup');
+
+    // Show the add exam popup when the link is clicked
+    addExamLink.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        addExamPopup.style.display = "block"; // Show the popup
+    });
+
+    // Close the add exam popup when the close button is clicked
+    closeExamPopupBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default button behavior
+        addExamPopup.style.display = "none"; // Hide the popup
+    });
+
+    // Close the add exam popup when clicking outside the popup
+    window.addEventListener('click', function(event) {
+        if (event.target == addExamPopup) {
+            addExamPopup.style.display = "none"; // Hide the popup
+        }
+    });
+    const deleteButtons = document.querySelectorAll(".btn");
+    deleteButtons.forEach(button => {
+        button.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent default button behavior
+
+            // Find the parent <tr> element and remove it
+            const row = this.closest("tr");
+            row.remove();
+        });
+    });
+
+//     document.getElementById('add-exam-form').addEventListener('submit', function(event) {
+//     // Prevent form submission
+//     event.preventDefault();
+
+//     // Get the values of all input fields
+//     const courseSelect = document.getElementById('course').value;
+//     const timeLimitSelect = document.getElementById('timeLimit').value;
+//     const questionLimitInput = document.getElementById('questionLimit').value.trim();
+//     const examTitleInput = document.getElementById('examTitle').value.trim();
+//     const examDescriptionInput = document.getElementById('examDescription').value.trim();
+
+//     // Validate all input fields
+//     if (courseSelect.trim() === '' || 
+//         timeLimitSelect.trim() === '' || 
+//         questionLimitInput === '' ||
+//         examTitleInput === '' ||
+//         examDescriptionInput === '') {
+//         // Show error message
+//         document.getElementById('error-message').innerText = 'Please fill in all fields.';
+//         document.getElementById('error-message').style.display = 'block';
+//     } else {
+//         // Hide error message
+//         document.getElementById('error-message').style.display = 'none';
+        
+//         // Submit the form or perform additional actions
+//         // For now, just hiding the popup after successful submission
+//         addExamPopup.style.display = "none"; // Hide the popup after successful submission
+//         showPopup(); // Show success popup
+//     }
+// });
+
+// document.getElementById('ok-btn').addEventListener('click', function() {
+//     hidePopup(); // Hide the success popup
+// });
+
+// // Function to show the success popup
+// function showPopup() {
+//     document.getElementById("add-now-popup").style.display = "block";
+// }
+
+// // Function to hide the success popup
+// function hidePopup() {
+//     document.getElementById("add-now-popup").style.display = "none";
+// }
+// document.getElementById('add-now-btn').addEventListener('click', function() {
+//     event.preventDefault();
+//         document.getElementById('popup').style.display = 'block';
+//     });
+
+//     document.getElementById('okButton').addEventListener('click', function() {
+//         document.getElementById('popup').style.display = 'none';
+//     });
+
+document.getElementById('add-now-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    var course = document.getElementById('course').value;
+    var timeLimit = document.getElementById('timeLimit').value;
+    var questionLimit = document.getElementById('questionLimit').value;
+    var examTitle = document.getElementById('examTitle').value;
+    var examDescription = document.getElementById('examDescription').value;
+    
+    var isValid = true;
+
+    // Validate course
+    if (course === "") {
+        document.getElementById('courseError').innerText = "Please select a course";
+        isValid = false;
+    } else {
+        document.getElementById('courseError').innerText = "";
+    }
+
+    // Validate time limit
+    if (timeLimit === "") {
+        document.getElementById('timeLimitError').innerText = "Please select a time limit";
+        isValid = false;
+    } else {
+        document.getElementById('timeLimitError').innerText = "";
+    }
+
+    // Validate question limit
+    if (questionLimit === "" || isNaN(questionLimit) || questionLimit < 1 || questionLimit > 1000) {
+        document.getElementById('questionLimitError').innerText = "Please enter a valid question limit (1-1000)";
+        isValid = false;
+    } else {
+        document.getElementById('questionLimitError').innerText = "";
+    }
+
+    // Validate exam title
+    if (examTitle.trim() === "") {
+        document.getElementById('examTitleError').innerText = "Please enter an exam title";
+        isValid = false;
+    } else {
+        document.getElementById('examTitleError').innerText = "";
+    }
+
+    // Validate exam description
+    if (examDescription.trim() === "") {
+        document.getElementById('examDescriptionError').innerText = "Please enter an exam description";
+        isValid = false;
+    } else {
+        document.getElementById('examDescriptionError').innerText = "";
+    }
+
+    // If all fields are valid, display success popup
+    if (isValid) {
+        document.getElementById('popup').style.display = 'block';
+    }
+});
+
+document.getElementById('okButton').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+});
+});
+
+    </script>
+</body>
+</html>

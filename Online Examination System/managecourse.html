@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manage courses</title>
+    <link rel="stylesheet" href="managecourse.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+                        <span class="title" style="font-size: larger;">Online Examination System</span>
+                        
+                    </a>
+                </li>
+                
+                <li>
+                    <div class="heading">
+                      <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Courses</span> 
+                    </div>
+                    <a href="#" id="add-course-link">
+                        <span class="icon"><ion-icon name="shield-checkmark-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Add Courses</span>
+                    </a>
+                </li>
+                
+               
+                <li>
+                    <a href="managecourse.html">
+                        <span class="icon"><ion-icon name="shield-half-outline"></ion-icon></span>
+                        <span class="title">Manage Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Exam</span> 
+                      </div>
+                    <a href="#"id="add-exam-link" >
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Add Exam</span>
+                    </a>
+                </li>      
+                <li>
+                    <a href="manageexam.html">
+                        <span class="icon"><ion-icon name="clipboard-outline"></ion-icon></span>
+                        <span class="title">Manage Exam</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Students</span> 
+                      </div>
+                    <a href="managestudent.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="title">Manage Students</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Reports</span> 
+                      </div>
+                    <a href="studentresult.html">
+                        <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+                        <span class="title">Students Result</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="admin.html" class="home-link">
+                        <div class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </div>
+                        <div class="title">
+                            Back to Home
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+
+                <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+
+                <div class="search">
+                    <label for="">
+                        <input type="search" name="" id="">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                
+                <div class="user">
+                    <img src="images/user.jpg" alt="">
+                    <!-- <div class="dropdown-content" id="logoutDropdown">
+                        <a href="#">Logout</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="dashBox">
+                <div class="card">
+                    <div class="iconBx">
+                        <ion-icon name="shield-half-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <div class="cardName">Manage Course</div>
+                    </div>
+                </div></div>
+            <div class="details">
+                <div class="recentOrder">
+                    <div class="cardHeader">
+                        <h2>Course List</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>    
+                                <td>Exam Name</td>
+                                <td >Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OOPS</td>
+                                <td> <a href="#" class="button" style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Web Development</td>
+                                <td> <a href="#"  class="button"style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Cyber Security</td>
+                                <td> <a href="#" class="button" style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Java</td>
+                                <td> <a href="#" class="button"style="background-color: blue;" >Manage</a>&nbsp; <a href="#" class="btn" style="background-color:rgb(227, 17, 157);">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <footer>
+                    <div class="footer-content">
+                      <p>&copy; 2024 Online Examination System. All rights reserved.</p>
+                    </div>
+                  </footer>
+                <div id="add-course-popup" class="popup" >
+                    <div class="popup-content">
+                    <form id="add-exam-form" action="/">
+                      <ion-icon name="close-circle" id="close-course-popup" style="float:right;font-size: 2.0em;color:  #287bff;"></ion-icon>
+                      <h1>Add Course</h1>
+                      <hr><br>
+                      
+                      <div class="input-control">
+                         <label for="examTitle">Course Name</label><br>
+                         <input type="text" id="examTitle" name="examTitle" > 
+                         <p id="error-message" style="color: red; display: none;">Please enter a course name</p>
+                      </div><br>
+                     
+      
+                      <div class="button-container">
+                          
+                      <button type="submit" id="add-now-btn" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Add Now</button></div>
+                  </form> </div>
+                 </div>     
+                 <div id="add-now-popup" class="popups">
+                    <div class="popup-contents">
+                        <ion-icon style="font-size: 9.0em;
+                        color: rgb(8, 151, 8);" name="checkmark-circle-outline"></ion-icon>
+                        <h1>Success</h1>
+                        <pre >course added successfully</pre><br>
+                        <button id="ok-btn" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Ok</button>
+                    </div>
+                </div>
+                 <div id="manage-course-popup" class="popup" >
+                    <div class="popup-content">
+                    <form id="update-form" action="/">
+                      <ion-icon name="close-circle" id="close-popup" style="float:right;font-size: 2.0em;color:  #287bff;"></ion-icon>
+                      <h1>Update Course</h1>
+                      <hr><br>
+                      
+                      <div class="input-control">
+                         <label for="examTitle">Course Name</label><br>
+                         <input type="text" id="examTitle" name="examTitle"> 
+                      </div><br>
+                     
+      
+                      <div class="button-container">
+                          
+                      <button type="submit" id="update-btn" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Update</button></div>
+                  </form> </div>
+                 </div>    
+                 <div id="update" class="popups">
+                    <div class="popup-contents">
+                        <ion-icon style="font-size: 9.0em;
+                        color: rgb(8, 151, 8);" name="checkmark-circle-outline"></ion-icon>
+                        <h1>Success</h1>
+                        <pre >course updated successfully</pre><br>
+                        <button id="ok-button" style="height:30px;width:100px;background-color: rgb(41, 41, 179);color:white;border:none;border-radius: 5px;">Ok</button>
+                    </div>
+                </div>
+
+            
+                
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // menu toggle
+        const toggle = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        const main = document.querySelector(".main");
+
+        toggle.onclick = function(){
+            navigation.classList.toggle("active")
+            main.classList.toggle("active")
+        }
+
+
+        // add hovered class in selected list item
+        const list = document.querySelectorAll(".navigation li");
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove("hovered"));
+            this.classList.add("hovered");
+        }
+        list.forEach((item) =>
+        item.addEventListener("mouseover",activeLink));
+
+//         document.addEventListener("DOMContentLoaded", function() {
+//             const addCourseLink = document.getElementById('add-course-link');
+//     const addCoursePopup = document.getElementById('add-course-popup');
+//     const closeCoursePopupBtn = document.getElementById('close-course-popup');
+
+//     // Show the add exam popup when the link is clicked
+//     addCourseLink.addEventListener('click', function(e) {
+//         e.preventDefault(); // Prevent default link behavior
+//         addCoursePopup.style.display = "block"; // Show the popup
+//     });
+
+//     // Close the add exam popup when the close button is clicked
+//     closeCoursePopupBtn.addEventListener('click', function(e) {
+//         e.preventDefault(); // Prevent default button behavior
+//         addCoursePopup.style.display = "none"; // Hide the popup
+//     });
+
+//     // Close the add exam popup when clicking outside the popup
+//     window.addEventListener('click', function(event) {
+//         if (event.target == addCoursePopup) {
+//             addCoursePopup.style.display = "none"; // Hide the popup
+//         }
+//     });
+//     const deleteButtons = document.querySelectorAll(".btn");
+//     deleteButtons.forEach(button => {
+//         button.addEventListener("click", function(e) {
+//             e.preventDefault(); // Prevent default button behavior
+
+//             // Find the parent <tr> element and remove it
+//             const row = this.closest("tr");
+//             row.remove();
+//         });
+//     });
+//     const manageButtons = document.querySelectorAll('.button');
+
+// manageButtons.forEach(function(button) {
+//     button.addEventListener('click', function(event) {
+//         event.preventDefault(); // Prevent default link behavior
+        
+//         // Get the corresponding popup ID
+//         const popupId = button.dataset.popupId;
+        
+//         // Show the corresponding popup
+//         const popup = document.getElementById(popupId);
+//         popup.style.display = 'block';
+//     });
+// });
+
+// // Close popup when close icon is clicked
+// const closeButtons = document.querySelectorAll('.popup ion-icon[id="close-popup"]');
+// closeButtons.forEach(function(closeButton) {
+//     closeButton.addEventListener('click', function() {
+//         const popup = closeButton.closest('.popup');
+//         popup.style.display = 'none';
+//     });
+// });
+
+
+// const inheritanceExamLink = document.getElementById('add-now-btn');
+//     const examPopup = document.getElementById("add-now-popup");
+//     const cancelExamBtn = document.getElementById("ok-btn");
+
+//     // Function to show the popup
+//     function showPopup() {
+//         examPopup.style.display = "block";
+//     }
+
+//     // Function to hide the popup
+//     function hidePopup() {
+//         examPopup.style.display = "none";
+//     }
+
+//     // Event listener for the inheritance exam link
+//     inheritanceExamLink.addEventListener('click', function(e) {
+//         e.preventDefault(); // Prevent default link behavior
+//         showPopup(); // Show the popup
+//     });
+
+//     cancelExamBtn.addEventListener('click', function() {
+//         hidePopup(); // Hide the popup if user cancels
+//     });
+
+
+// });    
+document.addEventListener("DOMContentLoaded", function() {
+    const addCourseLink = document.getElementById('add-course-link');
+    const addCoursePopup = document.getElementById('add-course-popup');
+    const closeCoursePopupBtn = document.getElementById('close-course-popup');
+
+    // Show the add exam popup when the link is clicked
+    addCourseLink.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        addCoursePopup.style.display = "block"; // Show the popup
+    });
+
+    // Close the add exam popup when the close button is clicked
+    closeCoursePopupBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default button behavior
+        addCoursePopup.style.display = "none"; // Hide the popup
+    });
+
+    // Close the add exam popup when clicking outside the popup
+    window.addEventListener('click', function(event) {
+        if (event.target == addCoursePopup) {
+            addCoursePopup.style.display = "none"; // Hide the popup
+        }
+    });
+    const deleteButtons = document.querySelectorAll(".btn");
+    deleteButtons.forEach(button => {
+        button.addEventListener("click", function(e) {
+            e.preventDefault(); // Prevent default button behavior
+
+            // Find the parent <tr> element and remove it
+            const row = this.closest("tr");
+            row.remove();
+        });
+    });
+    const manageButtons = document.querySelectorAll('.button');
+    const manageCoursePopup = document.getElementById('manage-course-popup');
+    const closeManagePopupBtn = document.getElementById('close-popup');
+
+    manageButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            manageCoursePopup.style.display = 'block';
+        });
+    });
+
+    closeManagePopupBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        manageCoursePopup.style.display = 'none';
+    });
+   
+    // Add event listener to the form submit button
+    document.getElementById('add-exam-form').addEventListener('submit', function(event) {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Get the value of the course name input
+        const courseNameInput = document.getElementById('examTitle');
+        const courseName = courseNameInput.value.trim();
+
+        // Validate the input
+        if (courseName === '') {
+            // Show error message
+            document.getElementById('error-message').style.display = 'block';
+        } else {
+            // Hide error message
+            document.getElementById('error-message').style.display = 'none';
+            
+            // Submit the form
+            // You can add additional actions here, such as AJAX submission
+            addCoursePopup.style.display = "none"; // Hide the popup after successful submission
+            showPopup(); // Show success popup
+        }
+    });
+    document.getElementById('ok-btn').addEventListener('click', function() {
+        hidePopup(); // Hide the success popup
+    }); 
+// Function to show the success popup
+   function showPopup() {
+    document.getElementById("add-now-popup").style.display = "block";
+   }
+
+    // Function to hide the success popup
+    function hidePopup() {
+        document.getElementById("add-now-popup").style.display = "none";
+    }
+
+});
+
+
+
+
+    </script>
+</body>
+</html>
