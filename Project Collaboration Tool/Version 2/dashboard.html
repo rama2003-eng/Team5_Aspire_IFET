@@ -1,0 +1,223 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS';
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #9ebbed;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .container{
+            text-align: center;
+            display: block;
+        }
+
+        .profile-summary {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9ebbed;
+            display: inline-block;
+            align-items: center;
+        }
+
+
+        .quick-access {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9ebbed;
+            display: flex;
+            justify-content: center; 
+        }
+
+        .quick-access button {
+            margin: 0 5px; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #5adb61, #0f85d3);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .quick-access button:hover {
+            background: linear-gradient(45deg, #0f85d3, #5adb61);
+        }
+
+        .logout button {
+            margin: 0 5px; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #f6acac, #d30f0f);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .logout button:hover {
+            background: linear-gradient(45deg, #d30f0f, #f6acac);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, Rosary Abilash!</h1>
+        <div class="logout" style="text-align: right;">
+            <button onclick="window.location.href = 'index.html' ">Logout</button>
+        </div>
+                
+    </header>
+
+        <div class="container">
+            <div class="profile-summary">
+                <h2>Rosary Abilash</h2>
+                <p>Email: rosaryabilash@gmail.com</p>
+                <p>Role: Administrator</p>
+            </div>
+    
+    
+            <div class="quick-access">
+                <button onclick="window.location.href = 'create_project.html' ">Create New Project</button>
+                <button>Add Task</button>
+                <button>Upload Document</button>
+                <button>Start Conversation</button>
+                <button>View Projects</button>
+                <button>View Task</button>
+            </div>
+        </div>
+
+
+
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS';
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #9ebbed;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .container{
+            text-align: center;
+            display: block;
+        }
+
+        .profile-summary {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9ebbed;
+            display: inline-block;
+            align-items: center;
+        }
+
+
+        .quick-access {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9ebbed;
+            display: flex;
+            justify-content: center; 
+        }
+
+        .quick-access button {
+            margin: 0 5px; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #5adb61, #0f85d3);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .quick-access button:hover {
+            background: linear-gradient(45deg, #0f85d3, #5adb61);
+        }
+
+        .logout button {
+            margin: 0 5px; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #f6acac, #d30f0f);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .logout button:hover {
+            background: linear-gradient(45deg, #d30f0f, #f6acac);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, <%= user.username %>!</h1>
+        <div class="logout" style="text-align: right;">
+            <button onclick="window.location.href = 'index.html' ">Logout</button>
+        </div>
+                
+    </header>
+
+        <div class="container">
+            <div class="profile-summary">
+                <h2><%= user.username %></h2>
+                <p>Email: <%= user.email %></p>
+                <p>Role: <%= user.role %></p>
+            </div>
+    
+            <!-- Quick Access Buttons -->
+            <div class="quick-access">
+                <button onclick="window.location.href = '/create_project' ">Create New Project</button>
+                <button>Add Task</button>
+                <button>Upload Document</button>
+                <button>Start Conversation</button>
+                <button>View Projects</button>
+                <button>View Task</button>
+            </div>
+        </div>
+
+</body>
+</html>

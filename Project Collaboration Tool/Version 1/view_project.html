@@ -1,0 +1,26 @@
+<!-- view_project.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Projects</title>
+</head>
+<body>
+    <h1>View Projects</h1>
+    <ul>
+        <% projects.forEach(project => { %>
+            <li>
+                <h2><%= project.projectName %></h2>
+                <p>Description: <%= project.description %></p>
+                <p>Start Date: <%= project.startDate %></p>
+                <p>End Date: <%= project.endDate %></p>
+                <p>Project Manager: <%= project.projectManager %></p>
+                <p>Priority: <%= project.priority %></p>
+                <!-- Add more project details here -->
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

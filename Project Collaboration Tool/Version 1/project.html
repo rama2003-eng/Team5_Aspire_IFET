@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS';
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #9ebbed;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .container{
+            text-align: center;
+            display: block;
+        }
+
+        .profile-summary {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9ebbed;
+            display: inline-block;
+            align-items: center;
+        }
+
+
+        .quick-access {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9ebbed;
+            display: flex;
+            justify-content: center; 
+        }
+
+        .quick-access button {
+            margin: 0 5px; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #5adb61, #0f85d3);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .quick-access button:hover {
+            background: linear-gradient(45deg, #0f85d3, #5adb61);
+        }
+
+        .logout button {
+            margin: 0 5px; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #f6acac, #d30f0f);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .logout button:hover {
+            background: linear-gradient(45deg, #d30f0f, #f6acac);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Projects</h1>
+        <div class="logout" style="text-align: right;">
+            <button>Logout</button>
+        </div>
+                
+    </header>
+
+        <div class="container">
+            <div class="profile-summary">
+                <h2>Rosary Abilash</h2>
+                <p>Email: rosaryabilash@gmail.com</p>
+                <p>Role: Administrator</p>
+            </div>
+    
+    
+            <div class="quick-access">
+                <button>Create Project</button>
+                <button>Add Resources to Project</button>
+                <button>View Project</button>
+                <button>Track Project</button>
+                <button>Update Project</button>
+                <span class="logout">
+                    <button >Delete Project</button>
+                </span>
+                
+
+                
+            </div>
+        </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Projects</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: 550px; /* Equal width for all project boxes */
+            list-style: none;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .priority {
+            font-weight: bold;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .low {
+            background-color: #5adb61; /* Green */
+        }
+
+        .medium {
+            background-color: #f0ad4e; /* Orange */
+        }
+
+        .high {
+            background-color: #d9534f; /* Red */
+        }
+    </style>
+</head>
+<body>
+    <h1>View Projects</h1>
+    <div class="projects-container">
+        <ul>
+            <% projects.forEach(project => { %>
+                <li>
+                    <h2><%= project.projectName %></h2>
+                    <p>Description: <%= project.description %></p>
+                    <p>Start Date: <%= project.startDate %></p>
+                    <p>End Date: <%= project.endDate %></p>
+                    <p>Project Manager: <%= project.projectManager %></p>
+                    <p>Priority: <span class="priority <%= project.priority %>"><%= project.priority %></span></p>
+                    <!-- Add more project details here -->
+                </li>
+                <br>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

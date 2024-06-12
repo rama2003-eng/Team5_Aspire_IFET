@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Project</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS';
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #9ebbed;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .container {
+            text-align: left;
+            margin: 20px auto;
+            width: 40%;
+        }
+
+        .form-section {
+            background-color: #fff;
+            padding: 20px 40px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #9ebbed;
+        }
+
+        .form-section h2 {
+            margin-top: 0;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-section input[type="text"],
+        input[type="date"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-section .btn-save,
+        .form-section .btn-cancel {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #5adb61, #0f85d3);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-section .btn-cancel {
+            background: linear-gradient(45deg, #f6acac, #d30f0f);
+            margin-right: 10px;
+        }
+
+        .form-section .btn-save:hover
+         {
+            background: linear-gradient(45deg, #0f85d3, #5adb61);
+        }
+        .logout button {
+            margin: 0 5px; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #f6acac, #d30f0f);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .logout button:hover {
+            background: linear-gradient(45deg, #d30f0f, #f6acac);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Create New Project</h1>
+    <div class="logout" style="text-align: right;">
+        <button>Logout</button>
+    </div>
+</header>
+
+<div class="container">
+    <form action="/createProject" method="POST">
+    <div class="form-section">
+        <h2>Project Information</h2>
+        <label for="project-name">Project Name:</label>
+        <input type="text" id="project-name" name="projectName" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="startDate" required>
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="endDate" required>
+
+        <label for="project-manager">Project Manager:</label>
+        <input type="text" id="project-manager" name="projectManager" required>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+    </div>
+    <div class="form-section">
+        <h2>Team Members</h2>
+        <div id="team-members">
+            <div class="team-member">
+                <label for="team-member-1">Name:</label>
+                <input type="text" id="team-member-1" name="teamMember[]" required>
+                <label for="role-1">Role:</label>
+                <select id="role-1" name="role[]" required>
+                    <option value="team-leader">Team Leader</option>
+                    <option value="team-member">Team Member</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn-save" type="button" onclick="addTeamMember()">Add Team Member</button>
+    </div>
+
+    <div class="form-section">
+        <h2>Tasks and Activities</h2>
+        <label for="tasks">Tasks:</label>
+        <textarea name="tasks" id="tasks" rows="2"></textarea>
+        <button class="btn-save" type="button" onclick="addTask()">Add More Task</button>
+        <!-- <button class="btn-save" type="button" onclick="addAllTask()">Submit</button> -->
+    </div>
+
+    <div class="form-section">
+        <h2>Milestones and Goals</h2>
+        <label for="milestones">Milestones:</label>
+        <textarea id="milestones" name="milestones[]" rows="4"></textarea>
+        <label for="goals">Goals:</label>
+        <textarea id="goals" name="goals[]" rows="4"></textarea>
+        <!-- <button class="btn-save" type="button" onclick="Submit()">Submit</button> -->
+    </div>
+    
+
+    <div class="form-section">
+        <h2>Document Upload</h2>
+        <input type="file" id="document-upload" name="document-upload[]" multiple accept=".doc,.docx,.pdf">
+        <label for="document-description">Document Description:</label>
+        <textarea id="document-description" name="document-description" rows="4"></textarea>
+    </div>
+
+    <div class="form-section">
+        <button class="btn-save" type="submit">Save Project</button>
+    </div>
+
+</form>
+</div>
+<!-- Popup message container -->
+<div id="popupMessage" class="popup-message"></div>
+
+</body>
+
+<script>
+
+
+
+    function addTeamMember() {
+    const teamMembersContainer = document.getElementById('team-members');
+    const newTeamMemberDiv = document.createElement('div');
+    newTeamMemberDiv.className = 'team-member';
+    newTeamMemberDiv.innerHTML = `
+        <label for="team-member-${teamMembersContainer.children.length + 1}">Name:</label>
+        <input type="text" id="team-member-${teamMembersContainer.children.length + 1}" name="team-member[]" required>
+        <label for="role-${teamMembersContainer.children.length + 1}">Role:</label>
+        <select id="role-${teamMembersContainer.children.length + 1}" name="role[]" required>
+            <option value="team-leader">Team Leader</option>
+            <option value="team-member">Team Member</option>
+        </select>
+    `;
+    teamMembersContainer.appendChild(newTeamMemberDiv);
+}
+function addTask() {
+    const tasksTextarea = document.getElementById('tasks');
+    tasksTextarea.insertAdjacentHTML('afterend', '<textarea name="tasks" rows="2"></textarea>');
+}
+
+</script>
+
+
+</html>
+
+
+

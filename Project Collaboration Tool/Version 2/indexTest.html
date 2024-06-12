@@ -1,0 +1,201 @@
+<!-- 
+Title : Project Collaboration Tool
+Author : Rosary Abilash M
+Created At : 25-03-2024
+Last Modified Date : 02-04-2024
+Reviewed By :
+Review Date : 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Collaboration Tool</title>
+    <!-- <style>
+        body{
+             font-family: Verdana;
+             background: linear-gradient(90deg, #a681cf, #8ac7d2);
+        }
+
+        header {
+            background: linear-gradient(45deg,  #0f85d3, #5adb61);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(95, 84, 211);
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer {
+            background-color: #7dc8e8;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #c3d4ea;
+            border-radius: 20px;
+            box-shadow: red;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .content li {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .button-container {
+        text-align: center;
+        }
+        .button{
+        display: inline-block;
+        font-size: 25px;
+        background: linear-gradient(45deg, #5adb61, #0f85d3);
+        border-radius: 5px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #fff;
+        box-shadow: 0 0 10px rgb(46, 43, 45);
+        }
+        .btn:hover {
+            background: linear-gradient(45deg,  #0f85d3, #5adb61);
+
+        }
+
+
+    </style> -->
+
+    <style>
+        body {
+    font-family: Verdana;
+    background: linear-gradient(90deg, #f8eaff, #cff6f9); /* Soft pastel gradient */
+}
+
+header {
+    background: linear-gradient(45deg, #fee9b0, #ffc1b2); /* Warm gradient */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #4e4b6f; /* Deep purple */
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #fdcb80; /* Coral */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f4f6; /* Light gray */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333; /* Dark gray */
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.content li {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    font-size: 25px;
+    background: linear-gradient(45deg, #66cdaa, #4bc0c8); /* Turquoise gradient */
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #4bc0c8, #66cdaa); /* Inverse turquoise gradient */
+}
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Project Collaboration Tool</h1>
+    </header>
+
+    <br>
+    <div class="content">
+        <p>Welcome to the Project Collaboration Tool!</p>
+        
+        <p>A platform is designed to streamline project management and facilitate collaboration among team members.</p>
+        <p>With this tool, you can:</p>
+        <ul>
+            <li>Organize project tasks and milestones</li>
+            <li>Assign tasks to team members</li>
+            <li>Track progress and deadlines</li>
+        </ul>
+    
+    <p>Get started by registering for an account or logging in if you already have one.</p>
+
+    <div class="button-container">
+        <button onclick="redirectToLogin()" class="button">Login</button>
+        <!-- <button onclick="redirectToSignUp()" class="btn">Signup</button> -->
+    </div>
+            
+    </div>
+   
+<script>
+    function redirectToLogin() {
+        window.location.href = "login.html#login"; 
+    }
+    function redirectToSignUp() {
+        window.location.href = "login.html#signup"; 
+    }
+    </script>
+    
+</body>
+<footer>
+    <p>&copy; 2024 Project Collaboration Tool. All rights reserved.</p>
+</footer>
+
+</html>
