@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AdminLogin Form</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="img">
+			<img src="images/ad.jpg">
+		</div>
+		<div class="login-content">
+			<form id="loginForm">
+				<img src="images/user.jpg" style="height:100px;width:100px">
+				<h2 class="title">Login</h2>
+				<div class="input-div">
+					<span class="icon"><ion-icon name="person"></ion-icon></span>
+					<div class="div">
+						<h5>Username</h5>
+						<input type="text" id="username" class="input" required>
+					</div>
+	
+				</div>
+				<div class="input-div">
+					<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+					<div class="div">
+						<h5>Password</h5>
+						<input type="password" id="password" class="input">
+					</div>
+				</div>
+				<div id="errorMessage" class="error-message"></div>
+				<input type="submit" class="btn" value="Login">
+			</form>
+		</div>
+    </div>
+    <script type="text/javascript" src="login.js"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const loginForm = document.getElementById("loginForm");
+		const errorMessage = document.getElementById("errorMessage");
+
+		loginForm.addEventListener("submit", function(event) {
+			event.preventDefault(); 
+
+			const username = document.getElementById("username").value;
+			const password = document.getElementById("password").value;
+
+			if (username === "Admin" && password === "Password") {
+				window.location.href = "admin.html?login=success";
+				alert("Login successful! ");
+			} else {
+				alert( "Invalid username or password");
+			}
+		});
+
+		window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.has("login") && urlParams.get("login") === "success") {
+        alert("Login successful! Welcome to the admin panel.");
+    }
+};
+	});
+</script>
+</body>
+</html>
+

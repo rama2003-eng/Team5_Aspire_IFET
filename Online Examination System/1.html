@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1.css">
+    <script  src="1.js"></script>
+</head>
+<body>
+    <div class="login-form">
+        <form class="form" action="/">
+            <h1>Add Exam</h1>
+            <hr><br>
+            <div >
+                <label for="course">Select Course:</label>
+               <select id="course" name="course">
+                 <option value="webDevelopment">Web Development</option>
+                 <option value="dataScience">Data Science</option>
+                 <option value="artificialIntelligence">Artificial Intelligence</option>
+            </select>
+           </div><br>    
+            <div class="input-control">
+                <label for="timeLimit">Exam Time Limit:</label>
+           <select id="timeLimit" name="timeLimit">
+                <option value="30">30 Minutes</option>
+                <option value="60">1 Hour</option>
+                <option value="120">2 Hours</option>
+            </select>
+            </div><br>
+            <div class="input-control">
+                <label for="questionLimit" >Question Limit to Display:</label>
+                <div id="questionLimit">
+                <input type="number" min=1 max=1000>   
+            </div><br>
+            <div class="input-control">
+               <label for="examTitle">Exam Title:</label>
+               <input type="text" id="examTitle" name="examTitle"> 
+            </div><br>
+           
+            Exam Description:<br>        
+            <textarea rows="8" cols="65" name="commentfield">Input Exam Description
+            </textarea>
+            <br>
+             <div class="right">
+            <button type="submit">Add Now</button></div>
+        </form>
+    </div>
+</body>
+</html>

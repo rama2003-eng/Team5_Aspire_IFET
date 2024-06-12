@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+     <link rel="stylesheet" href="style.css"> 
+   
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+   
+</head>
+<body>
+    <header>
+
+        <nav>
+        <div class="logo">
+          <span class="icon"><ion-icon name="school-outline"></ion-icon></span>&nbsp;Online Examination System
+        </div>
+        <div class="menu">
+                <a href="main.html">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Sign Out</span>
+                </a>
+        
+        </div>
+        </nav>
+            </header>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <!-- <a href="#">
+                        <span class="icon"><ion-icon name="school-outline"></ion-icon></span>
+                        <span class="title" style="font-size: larger;">Online Examination System</span>
+                       
+                    </a> -->
+                </li>
+                
+                <li>
+                    <div class="heading">
+                      <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Available Exam</span> 
+                    </div>
+                    <a href="#" id="inheritance-exam-link">
+                        <span class="icon"><ion-icon name="shield-checkmark-outline"></ion-icon></span>
+                        <span class="title">OOPS - Inheritance</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <div class="heading">
+                        <span class="link-name" style="font-weight: 500;font-size:20px;color:white">Taken Exam</span> 
+                      </div>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></ion-icon></span>
+                        <span class="title">you are not taking exam yet</span>
+                    </a>
+                </li>      
+                <!-- <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="index.html" class="home-link">
+                        <div class="icon">
+                            <ion-icon name="home"></ion-icon>
+                        </div>
+                        <div class="title">
+                            Back to Home
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+                    
+            
+
+        <!-- main -->
+        <div class="main" >
+            <div class="topbar">
+
+                <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+                
+            </div>
+              
+            <div id="exam-popup" class="popup">
+                <div class="popup-content">
+                    <ion-icon style="font-size: 9.0em;
+                    color: orange;" name="alert-circle-outline"></ion-icon>
+                    <h1>Are you sure ?</h1>
+                    <pre >you want to take this exam now,
+ your time will start automatically </pre><br>
+                    <button id="start-exam-btn" class="btn">Yes Start Now</button>
+                    <button id="cancel-exam-btn" class="btn">Cancel</button>
+                </div>
+            </div>
+                
+     
+    
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // menu toggle
+        document.addEventListener("DOMContentLoaded", function() {
+    const inheritanceExamLink = document.getElementById('inheritance-exam-link');
+    const examPopup = document.getElementById('exam-popup');
+    const startExamBtn = document.getElementById('start-exam-btn');
+    const cancelExamBtn = document.getElementById('cancel-exam-btn');
+
+    // Function to show the popup
+    function showPopup() {
+        examPopup.style.display = "block";
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+        examPopup.style.display = "none";
+    }
+
+    // Event listener for the inheritance exam link
+    inheritanceExamLink.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        showPopup(); // Show the popup
+    });
+
+    cancelExamBtn.addEventListener('click', function() {
+        hidePopup(); // Hide the popup if user cancels
+    });
+
+    // Event listener for the "Start Exam" button
+    startExamBtn.addEventListener('click', function() {
+        console.log("Start Exam button clicked!"); // Check if this message appears in the console
+        // Redirect to exam.html inside the Student folder
+        window.location.href = 'exam.html';
+    });
+});
+    </script>
+</body>
+</html>
